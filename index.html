@@ -4,115 +4,225 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SKYAXON Scrap Buyers in Bengaluru | Industrial Scrap Solutions</title>
+<title>SKYAXON Scrap Solutions Bengaluru</title>
 
-<meta name="description" content="SKYAXON Scrap Solutions - Best scrap buyers in Bengaluru. Industrial scrap, metal scrap, e-waste, factory clearance. Fast pickup, best price.">
-<meta name="keywords" content="scrap buyers Bangalore, metal scrap Bangalore, industrial scrap Bengaluru, e-waste recycling">
-<meta name="author" content="SKYAXON">
+<meta name="description" content="SKYAXON Scrap Buyers in Bengaluru. Industrial, Metal, E-waste recycling. Best price, fast pickup. GST:29CCGPM5202G2ZO">
 
-<!-- PERFORMANCE -->
-<link rel="preload" as="image" href="Untitled design_page-0001.jpg">
-<link rel="preload" as="image" href="Untitled design_page-0002.jpg">
-
-<!-- GOOGLE FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- SEO STRUCTURED DATA -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "LocalBusiness",
- "name": "SKYAXON Scrap Solutions",
- "telephone": "+918217508843",
- "address": {
-   "@type": "PostalAddress",
-   "addressLocality": "Bengaluru",
-   "addressRegion": "Karnataka",
-   "addressCountry": "India"
- },
- "description": "Industrial scrap buyers and recycling services in Bengaluru",
- "priceRange": "₹₹"
-}
-</script>
-
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:Poppins,sans-serif;color:#333;}
-html{scroll-behavior:smooth;}
 
-section{padding:90px 20px;}
-.container{max-width:1200px;margin:auto;}
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#f5f7fb;color:#222}
 
-img{max-width:100%;height:auto;}
+/* NAVBAR */
+header{
+position:fixed;width:100%;top:0;
+background:#0b3a8f;color:#fff;
+z-index:999;
+box-shadow:0 3px 10px rgba(0,0,0,0.2)
+}
+.nav{
+display:flex;justify-content:space-between;
+align-items:center;padding:12px 40px;
+}
+.logo{
+display:flex;align-items:center;gap:10px;
+font-size:26px;font-weight:700
+}
+.logo img{height:55px}
 
-/* NAV */
-header{position:fixed;width:100%;background:#0b3a8f;color:#fff;z-index:1000;}
-.nav{display:flex;justify-content:space-between;align-items:center;padding:15px;}
-.logo{display:flex;align-items:center;gap:10px;}
-.logo img{height:70px;}
-.logo h1{font-size:28px;}
-nav ul{display:flex;gap:20px;list-style:none;}
-nav a{color:#fff;text-decoration:none;font-weight:600;}
-nav a:hover{color:#ffd700;}
+nav ul{display:flex;gap:25px;list-style:none}
+nav a{color:#fff;text-decoration:none;font-weight:600}
+nav a:hover{color:#ffd700}
 
 /* HERO */
-.hero{height:100vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden;}
-.hero img{position:absolute;width:100%;height:100%;object-fit:cover;opacity:0;transition:1s;}
-.hero img.active{opacity:1;}
-.hero::after{content:"";position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.6);}
-.hero-content{position:relative;z-index:2;}
-.hero h1{font-size:55px;margin-bottom:20px;}
-.hero p{font-size:22px;margin-bottom:20px;}
+.hero{
+height:100vh;position:relative;
+display:flex;align-items:center;
+justify-content:center;color:#fff;
+text-align:center;overflow:hidden
+}
 
+.slide{
+position:absolute;width:100%;height:100%;
+background-size:cover;
+background-position:center;
+opacity:0;animation:fade 24s infinite
+}
+
+.slide:nth-child(1){background-image:url("Untitled design_page-0001.jpg");animation-delay:0s}
+.slide:nth-child(2){background-image:url("Untitled design_page-0002.jpg");animation-delay:6s}
+.slide:nth-child(3){background-image:url("Untitled design_page-0003.jpg");animation-delay:12s}
+.slide:nth-child(4){background-image:url("Untitled design_page-0004.jpg");animation-delay:18s}
+
+@keyframes fade{
+0%{opacity:0}
+10%{opacity:1}
+25%{opacity:1}
+35%{opacity:0}
+100%{opacity:0}
+}
+
+.hero::after{
+content:"";position:absolute;
+width:100%;height:100%;
+background:rgba(0,0,0,0.6)
+}
+
+.hero-content{
+position:relative;z-index:2
+}
+
+.hero h1{
+font-size:52px;margin-bottom:20px
+}
+.hero p{
+font-size:20px;margin-bottom:30px
+}
+
+/* BUTTONS */
 .btn{
 background:#ffd700;color:#000;
-padding:14px 30px;
+padding:14px 28px;
 border-radius:40px;
-font-weight:bold;
 text-decoration:none;
-margin:5px;
+font-weight:600;
+margin:10px;
 display:inline-block;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
 transition:.3s;
-will-change:transform;
+box-shadow:0 5px 15px rgba(0,0,0,0.3)
 }
-.btn:hover{transform:scale(1.05);background:#fff;}
+.btn:hover{
+transform:scale(1.08);
+background:#fff
+}
+
+/* SECTION */
+section{padding:90px 20px}
+.container{max-width:1200px;margin:auto}
+
+/* TITLE */
+.title{
+font-size:32px;
+margin-bottom:40px;
+text-align:center;
+font-weight:700
+}
 
 /* CARDS */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
-.card{padding:25px;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
-.card i{font-size:40px;color:#0b3a8f;margin-bottom:10px;}
-
-.highlight{background:#f5f7fa;}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px
+}
+.card{
+background:#fff;
+padding:30px;
+border-radius:12px;
+text-align:center;
+transition:.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.08)
+}
+.card:hover{
+transform:translateY(-10px)
+}
+.card i{
+font-size:40px;
+color:#0b3a8f;
+margin-bottom:15px
+}
 
 /* GALLERY */
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
-.gallery img{border-radius:10px;}
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px
+}
+.gallery img{
+width:100%;
+border-radius:12px;
+cursor:pointer;
+transition:.3s
+}
+.gallery img:hover{
+transform:scale(1.05)
+}
+
+/* ABOUT */
+.about{
+background:#eef3ff;
+border-radius:12px;
+padding:40px;
+line-height:1.8
+}
+
+/* FORM */
+form{
+background:#fff;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1)
+}
+form input,form textarea,form select{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ccc
+}
 
 /* FOOTER */
-footer{background:#0b3a8f;color:#fff;text-align:center;padding:20px;}
+footer{
+background:#0b3a8f;
+color:#fff;
+padding:30px;
+text-align:center
+}
 
 /* WHATSAPP */
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;}
+.whatsapp{
+position:fixed;
+bottom:20px;right:20px;
+background:#25D366;
+color:#fff;
+width:60px;height:60px;
+border-radius:50%;
+display:flex;align-items:center;
+justify-content:center;
+font-size:28px;
+z-index:999
+}
+
+/* CHAT POPUP */
+.chat{
+position:fixed;
+bottom:90px;right:20px;
+background:#fff;
+padding:20px;
+border-radius:12px;
+width:260px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2)
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="nav container">
+<div class="nav">
 <div class="logo">
-<img src="SKYAXON Logo.jpeg" loading="eager">
-<h1>SKYAXON</h1>
+<img src="SKYAXON Logo.jpeg">
+SKYAXON
 </div>
-
 <nav>
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#services">Services</a></li>
+<li><a href="#gallery">Gallery</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
@@ -122,101 +232,117 @@ footer{background:#0b3a8f;color:#fff;text-align:center;padding:20px;}
 
 <!-- HERO -->
 <section id="home" class="hero">
-<img src="Untitled design_page-0001.jpg" class="active" fetchpriority="high">
-<img src="Untitled design_page-0002.jpg" loading="lazy">
-<img src="Untitled design_page-0003.jpg" loading="lazy">
-<img src="Untitled design_page-0004.jpg" loading="lazy">
-<img src="Untitled design_page-0005.jpg" loading="lazy">
-<img src="Untitled design_page-0006.jpg" loading="lazy">
+
+<div class="slide"></div>
+<div class="slide"></div>
+<div class="slide"></div>
+<div class="slide"></div>
 
 <div class="hero-content">
 <h1>Turn Your Scrap Into Value</h1>
-<p>Trusted Scrap Buying & Recycling in Bengaluru</p>
+<p>Premium Scrap Buying & Recycling in Bengaluru</p>
 
 <a href="tel:+918217508843" class="btn">Call Now</a>
 <a href="https://wa.me/918217508843" class="btn">WhatsApp</a>
 </div>
+
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="highlight">
+<section id="services">
 <div class="container">
-<h2>Core Services</h2>
-<div class="cards">
+<h2 class="title">Our Services</h2>
+<div class="grid">
+
 <div class="card"><i class="fas fa-industry"></i><h3>Industrial Scrap</h3></div>
 <div class="card"><i class="fas fa-recycle"></i><h3>Metal Scrap</h3></div>
-<div class="card"><i class="fas fa-dumpster"></i><h3>Factory Clearance</h3></div>
 <div class="card"><i class="fas fa-laptop"></i><h3>E-Waste</h3></div>
+<div class="card"><i class="fas fa-truck"></i><h3>Factory Clearance</h3></div>
+
 </div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+<div class="container">
+<h2 class="title">Gallery</h2>
+
+<div class="gallery">
+<img src="Untitled design_page-0001.jpg">
+<img src="Untitled design_page-0002.jpg">
+<img src="Untitled design_page-0003.jpg">
+<img src="Untitled design_page-0004.jpg">
+<img src="Untitled design_page-0005.jpg">
+<img src="Untitled design_page-0006.jpg">
+</div>
+
 </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
 <div class="container">
-<h2>About SKYAXON</h2>
-<p><b>Proprietor:</b> Prabhu Babu</p>
-<p><b>GST:</b> 29CCGPM5202G2ZO</p>
+<h2 class="title">About SKYAXON</h2>
+
+<div class="about">
 
 <p>
-SKYAXON provides premium scrap buying services with transparency, best pricing, and eco-friendly recycling solutions across Bengaluru.
+SKYAXON is a modern and reliable scrap management company dedicated to transforming waste into value.
 </p>
 
-<ul>
-<li>✔ Best market rates</li>
-<li>✔ Instant pickup</li>
-<li>✔ Verified weighing</li>
-<li>✔ Eco-friendly disposal</li>
-<li>✔ Long-term business support</li>
-</ul>
+<p>
+We specialize in collecting, processing, and recycling all types of scrap materials with a strong focus on sustainability, efficiency, and customer satisfaction.
+</p>
+
+<p>
+Our mission is to provide eco-friendly solutions that help industries and individuals responsibly dispose of scrap while contributing to a cleaner environment.
+</p>
+
+<br>
+
+<p><b>GST:</b> 29CCGPM5202G2ZO</p>
+
+</div>
+
 </div>
 </section>
 
-<!-- GALLERY -->
-<section>
+<!-- CONTACT / ENQUIRY -->
+<section id="contact">
 <div class="container">
-<h2>Gallery</h2>
-<div class="gallery">
-<img src="Untitled design_page-0001.jpg" loading="lazy">
-<img src="Untitled design_page-0002.jpg" loading="lazy">
-<img src="Untitled design_page-0003.jpg" loading="lazy">
-<img src="Untitled design_page-0004.jpg" loading="lazy">
-<img src="Untitled design_page-0005.jpg" loading="lazy">
-<img src="Untitled design_page-0006.jpg" loading="lazy">
-</div>
-</div>
-</section>
+<h2 class="title">Send Enquiry</h2>
 
-<!-- CONTACT -->
-<section id="contact" class="highlight">
-<div class="container">
-<h2>Contact Us</h2>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Email">
+<input type="tel" placeholder="Phone">
+<select>
+<option>Sell Scrap</option>
+<option>Buy Scrap</option>
+</select>
+<textarea rows="4" placeholder="Your Message"></textarea>
+<button class="btn">Send</button>
+</form>
 
-<p>📞 +91 8217508843/7899917313</p>
-<p>📧 skyaxonofficial@gmail.com</p>
-
-<iframe src="https://maps.google.com/maps?q=Bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300"></iframe>
 </div>
 </section>
 
 <footer>
-<p>© 2026 SKYAXON Scrap Solutions</p>
+<p>© 2026 SKYAXON | Bengaluru Scrap Solutions</p>
 </footer>
 
+<!-- WHATSAPP -->
 <a href="https://wa.me/918217508843" class="whatsapp">
 <i class="fab fa-whatsapp"></i>
 </a>
 
-<script>
-// HERO SLIDER
-let slides=document.querySelectorAll(".hero img");
-let i=0;
-setInterval(()=>{
-slides[i].classList.remove("active");
-i=(i+1)%slides.length;
-slides[i].classList.add("active");
-},3000);
-</script>
+<!-- CHAT -->
+<div class="chat">
+<p><b>Hi 👋</b></p>
+<p>Need scrap pickup?</p>
+<a href="https://wa.me/918217508843" class="btn">Chat Now</a>
+</div>
 
 </body>
 </html>
