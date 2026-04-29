@@ -861,15 +861,17 @@ img {
   </div>
 
   <div class="contact-form fade-up">
+ <form action="https://formspree.io/f/YOUR-ID" method="POST">
     <div class="section-tag" style="margin-bottom:24px;">Quick Enquiry</div>
+  <form action="https://formspree.io/f/xxxxxxxx" method="POST">
     <div class="form-row">
       <div class="form-group">
         <label>Your Name</label>
-        <input type="text" placeholder="John Doe">
+       <input type="text" name="name" placeholder="John Doe">
       </div>
       <div class="form-group">
         <label>Phone Number</label>
-        <input type="tel" placeholder="+91 XXXXX XXXXX">
+        <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX">
       </div>
     </div>
     <div class="form-group">
@@ -887,11 +889,10 @@ img {
         <option>Industrial Waste</option>
         <option>Mixed / Multiple Types</option>
         <option>Other</option>
-      </select>
-    </div>
+<select name="scrap_type">    </div>
     <div class="form-group">
       <label>Message / Quantity Details</label>
-      <textarea placeholder="Tell us about your scrap — quantity, location, urgency..."></textarea>
+   <textarea name="message" placeholder="Tell us about your scrap — quantity, location, urgency..."></textarea>
     </div>
     <button class="form-submit" onclick="alert('Thank you! We will contact you shortly. Call us directly at +91 8217508843')">Send Enquiry →</button>
   </div>
@@ -995,3 +996,4 @@ z-index:999;
 </a>
 </body>
 </html>
+   
