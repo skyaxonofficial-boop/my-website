@@ -6,27 +6,54 @@
 
 <title>SKYAXON Scrap Buyers in Bengaluru | Industrial Scrap Solutions</title>
 
-<meta name="description" content="SKYAXON Scrap Solutions - Best scrap buyers in Bengaluru. Industrial scrap, metal scrap, factory clearance, e-waste. Fast pickup, best price.">
-<meta name="keywords" content="scrap buyers Bangalore, metal scrap Bangalore, industrial scrap buyers, e-waste recycling Bangalore">
+<meta name="description" content="SKYAXON Scrap Solutions - Best scrap buyers in Bengaluru. Industrial scrap, metal scrap, e-waste, factory clearance. Fast pickup, best price.">
+<meta name="keywords" content="scrap buyers Bangalore, metal scrap Bangalore, industrial scrap Bengaluru, e-waste recycling">
 <meta name="author" content="SKYAXON">
 
+<!-- PERFORMANCE -->
+<link rel="preload" as="image" href="Untitled design_page-0001.jpg">
+<link rel="preload" as="image" href="Untitled design_page-0002.jpg">
+
+<!-- GOOGLE FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- SEO STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "LocalBusiness",
+ "name": "SKYAXON Scrap Solutions",
+ "telephone": "+918217508843",
+ "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Bengaluru",
+   "addressRegion": "Karnataka",
+   "addressCountry": "India"
+ },
+ "description": "Industrial scrap buyers and recycling services in Bengaluru",
+ "priceRange": "₹₹"
+}
+</script>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:Poppins,sans-serif;color:#333;}
+html{scroll-behavior:smooth;}
 
 section{padding:90px 20px;}
 .container{max-width:1200px;margin:auto;}
 
+img{max-width:100%;height:auto;}
+
 /* NAV */
 header{position:fixed;width:100%;background:#0b3a8f;color:#fff;z-index:1000;}
 .nav{display:flex;justify-content:space-between;align-items:center;padding:15px;}
-.logo img{height:70px;}
 .logo{display:flex;align-items:center;gap:10px;}
+.logo img{height:70px;}
 .logo h1{font-size:28px;}
-
 nav ul{display:flex;gap:20px;list-style:none;}
 nav a{color:#fff;text-decoration:none;font-weight:600;}
 nav a:hover{color:#ffd700;}
@@ -37,25 +64,38 @@ nav a:hover{color:#ffd700;}
 .hero img.active{opacity:1;}
 .hero::after{content:"";position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.6);}
 .hero-content{position:relative;z-index:2;}
-
 .hero h1{font-size:55px;margin-bottom:20px;}
 .hero p{font-size:22px;margin-bottom:20px;}
 
-.btn{background:#ffd700;padding:14px 30px;border-radius:40px;font-weight:bold;text-decoration:none;color:#000;margin:5px;}
-.btn:hover{background:#fff;transform:scale(1.05);}
+.btn{
+background:#ffd700;color:#000;
+padding:14px 30px;
+border-radius:40px;
+font-weight:bold;
+text-decoration:none;
+margin:5px;
+display:inline-block;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+transition:.3s;
+will-change:transform;
+}
+.btn:hover{transform:scale(1.05);background:#fff;}
 
-/* SECTIONS */
+/* CARDS */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
 .card{padding:25px;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
 .card i{font-size:40px;color:#0b3a8f;margin-bottom:10px;}
 
 .highlight{background:#f5f7fa;}
 
+/* GALLERY */
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
-.gallery img{width:100%;border-radius:10px;}
+.gallery img{border-radius:10px;}
 
+/* FOOTER */
 footer{background:#0b3a8f;color:#fff;text-align:center;padding:20px;}
 
+/* WHATSAPP */
 .whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;}
 </style>
 </head>
@@ -65,9 +105,10 @@ footer{background:#0b3a8f;color:#fff;text-align:center;padding:20px;}
 <header>
 <div class="nav container">
 <div class="logo">
-<img src="SKYAXON Logo.jpeg">
+<img src="SKYAXON Logo.jpeg" loading="eager">
 <h1>SKYAXON</h1>
 </div>
+
 <nav>
 <ul>
 <li><a href="#home">Home</a></li>
@@ -81,16 +122,17 @@ footer{background:#0b3a8f;color:#fff;text-align:center;padding:20px;}
 
 <!-- HERO -->
 <section id="home" class="hero">
-<img src="Untitled design_page-0001.jpg" class="active">
-<img src="Untitled design_page-0002.jpg">
-<img src="Untitled design_page-0003.jpg">
-<img src="Untitled design_page-0004.jpg">
-<img src="Untitled design_page-0005.jpg">
-<img src="Untitled design_page-0006.jpg">
+<img src="Untitled design_page-0001.jpg" class="active" fetchpriority="high">
+<img src="Untitled design_page-0002.jpg" loading="lazy">
+<img src="Untitled design_page-0003.jpg" loading="lazy">
+<img src="Untitled design_page-0004.jpg" loading="lazy">
+<img src="Untitled design_page-0005.jpg" loading="lazy">
+<img src="Untitled design_page-0006.jpg" loading="lazy">
 
 <div class="hero-content">
 <h1>Turn Your Scrap Into Value</h1>
-<p>Trusted Scrap Buying & Recycling Services in Bengaluru</p>
+<p>Trusted Scrap Buying & Recycling in Bengaluru</p>
+
 <a href="tel:+918217508843" class="btn">Call Now</a>
 <a href="https://wa.me/918217508843" class="btn">WhatsApp</a>
 </div>
@@ -99,39 +141,12 @@ footer{background:#0b3a8f;color:#fff;text-align:center;padding:20px;}
 <!-- SERVICES -->
 <section id="services" class="highlight">
 <div class="container">
-<h2>Our Core Services</h2>
+<h2>Core Services</h2>
 <div class="cards">
-<div class="card"><i class="fas fa-industry"></i><h3>Industrial Scrap</h3><p>Heavy machinery & factory scrap handling</p></div>
-<div class="card"><i class="fas fa-recycle"></i><h3>Metal Scrap</h3><p>Ferrous & non-ferrous metals</p></div>
-<div class="card"><i class="fas fa-dumpster"></i><h3>Factory Clearance</h3><p>Complete site cleaning solutions</p></div>
-<div class="card"><i class="fas fa-laptop"></i><h3>E-Waste</h3><p>Safe electronic disposal</p></div>
-</div>
-</div>
-</section>
-
-<!-- WHY CHOOSE -->
-<section>
-<div class="container">
-<h2>Why Choose SKYAXON?</h2>
-<div class="cards">
-<div class="card">✔ Best Prices</div>
-<div class="card">✔ Fast Pickup</div>
-<div class="card">✔ Verified Weighing</div>
-<div class="card">✔ Eco-Friendly</div>
-<div class="card">✔ Trusted Partner</div>
-<div class="card">✔ Digital Tracking</div>
-</div>
-</div>
-</section>
-
-<!-- OFFERS -->
-<section class="highlight">
-<div class="container">
-<h2>Special Offers</h2>
-<div class="cards">
-<div class="card">Bulk Scrap Special</div>
-<div class="card">Loyalty Rewards</div>
-<div class="card">Refer & Earn</div>
+<div class="card"><i class="fas fa-industry"></i><h3>Industrial Scrap</h3></div>
+<div class="card"><i class="fas fa-recycle"></i><h3>Metal Scrap</h3></div>
+<div class="card"><i class="fas fa-dumpster"></i><h3>Factory Clearance</h3></div>
+<div class="card"><i class="fas fa-laptop"></i><h3>E-Waste</h3></div>
 </div>
 </div>
 </section>
@@ -140,23 +155,20 @@ footer{background:#0b3a8f;color:#fff;text-align:center;padding:20px;}
 <section id="about">
 <div class="container">
 <h2>About SKYAXON</h2>
-
 <p><b>Proprietor:</b> Prabhu Babu</p>
 <p><b>GST:</b> 29CCGPM5202G2ZO</p>
 
 <p>
-SKYAXON Scrap Solutions is a trusted name in Bengaluru for industrial and metal scrap buying.  
-We specialize in delivering transparent, fast, and eco-friendly solutions for businesses and individuals.
+SKYAXON provides premium scrap buying services with transparency, best pricing, and eco-friendly recycling solutions across Bengaluru.
 </p>
 
-<p>
-✔ Transparent pricing  
-✔ Instant service  
-✔ Sustainable recycling  
-✔ Long-term partnership  
-✔ Professional handling  
-</p>
-
+<ul>
+<li>✔ Best market rates</li>
+<li>✔ Instant pickup</li>
+<li>✔ Verified weighing</li>
+<li>✔ Eco-friendly disposal</li>
+<li>✔ Long-term business support</li>
+</ul>
 </div>
 </section>
 
@@ -165,12 +177,12 @@ We specialize in delivering transparent, fast, and eco-friendly solutions for bu
 <div class="container">
 <h2>Gallery</h2>
 <div class="gallery">
-<img src="Untitled design_page-0001.jpg">
-<img src="Untitled design_page-0002.jpg">
-<img src="Untitled design_page-0003.jpg">
-<img src="Untitled design_page-0004.jpg">
-<img src="Untitled design_page-0005.jpg">
-<img src="Untitled design_page-0006.jpg">
+<img src="Untitled design_page-0001.jpg" loading="lazy">
+<img src="Untitled design_page-0002.jpg" loading="lazy">
+<img src="Untitled design_page-0003.jpg" loading="lazy">
+<img src="Untitled design_page-0004.jpg" loading="lazy">
+<img src="Untitled design_page-0005.jpg" loading="lazy">
+<img src="Untitled design_page-0006.jpg" loading="lazy">
 </div>
 </div>
 </section>
@@ -184,7 +196,6 @@ We specialize in delivering transparent, fast, and eco-friendly solutions for bu
 <p>📧 skyaxonofficial@gmail.com</p>
 
 <iframe src="https://maps.google.com/maps?q=Bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300"></iframe>
-
 </div>
 </section>
 
@@ -197,6 +208,7 @@ We specialize in delivering transparent, fast, and eco-friendly solutions for bu
 </a>
 
 <script>
+// HERO SLIDER
 let slides=document.querySelectorAll(".hero img");
 let i=0;
 setInterval(()=>{
