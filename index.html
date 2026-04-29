@@ -12,35 +12,64 @@
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 
-/* BACKGROUND */
+/* LIGHT BACKGROUND WITH MOVING IMAGES */
 body{
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-color:#fff;
+background:#f5f7fa;
+color:#222;
+overflow-x:hidden;
+}
+
+/* BACKGROUND FLOATING IMAGES */
+.bg-images{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:-1;
+opacity:0.08;
+}
+
+.bg-images img{
+position:absolute;
+width:300px;
+animation:float 20s linear infinite;
+}
+
+.bg-images img:nth-child(1){top:10%;left:5%}
+.bg-images img:nth-child(2){top:60%;left:70%}
+.bg-images img:nth-child(3){top:30%;left:50%}
+.bg-images img:nth-child(4){top:80%;left:20%}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-40px)}
+100%{transform:translateY(0)}
 }
 
 /* NAV */
 nav{
 position:fixed;
 top:0;width:100%;
-background:rgba(0,0,0,0.7);
-backdrop-filter:blur(10px);
+background:#ffffffee;
 display:flex;
 justify-content:space-between;
 padding:15px 40px;
 z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
 .logo{
 display:flex;
 align-items:center;
-gap:12px;
-font-size:30px;
+gap:10px;
+font-size:26px;
 font-weight:800;
-color:#facc15;
+color:#b87333;
 }
 
 .logo img{
-height:65px;
+height:55px;
 }
 
 /* MENU */
@@ -51,14 +80,12 @@ list-style:none;
 }
 
 nav a{
-color:#fff;
+color:#333;
 text-decoration:none;
-font-weight:500;
-transition:0.3s;
 }
 
 nav a:hover{
-color:#facc15;
+color:#b87333;
 }
 
 /* BUTTON */
@@ -87,14 +114,6 @@ opacity:0;
 transition:1s;
 }
 
-/* fallback if image missing */
-.slide::after{
-content:"";
-position:absolute;
-width:100%;height:100%;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8));
-}
-
 .slide.active{opacity:1}
 
 /* HERO TEXT */
@@ -104,18 +123,18 @@ top:50%;
 left:10%;
 transform:translateY(-50%);
 max-width:600px;
-z-index:2;
+color:#fff;
 }
 
 .hero h1{
-font-size:60px;
+font-size:50px;
 font-weight:800;
-color:#facc15;
+color:#fff;
+text-shadow:2px 2px 10px rgba(0,0,0,0.5);
 }
 
 .hero p{
 margin:20px 0;
-color:#ddd;
 }
 
 /* BUTTON */
@@ -127,13 +146,6 @@ background:#b87333;
 color:#fff;
 border-radius:8px;
 text-decoration:none;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:scale(1.1);
-background:#facc15;
-color:#000;
 }
 
 /* SECTION */
@@ -143,10 +155,10 @@ padding:80px 40px;
 
 /* TITLE */
 .title{
-font-size:38px;
+font-size:32px;
 font-weight:800;
 margin-bottom:30px;
-color:#facc15;
+color:#b87333;
 }
 
 /* GRID */
@@ -158,28 +170,10 @@ gap:25px;
 
 /* CARD */
 .card{
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.1);
+background:#fff;
 padding:25px;
 border-radius:12px;
-transition:0.3s;
-backdrop-filter:blur(8px);
-}
-
-.card:hover{
-transform:translateY(-10px);
-border-color:#facc15;
-}
-
-.card img{
-height:50px;
-margin-bottom:10px;
-}
-
-/* ABOUT */
-.about{
-line-height:1.8;
-color:#ddd;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* GALLERY */
@@ -188,11 +182,6 @@ width:100%;
 height:230px;
 object-fit:cover;
 border-radius:10px;
-transition:0.3s;
-}
-
-.gallery img:hover{
-transform:scale(1.05);
 }
 
 /* CONTACT */
@@ -202,28 +191,21 @@ grid-template-columns:1fr 1fr;
 gap:30px;
 }
 
-/* FORM */
-input,textarea,select{
+input,textarea{
 width:100%;
 padding:12px;
 margin-top:10px;
-background:rgba(255,255,255,0.1);
-border:none;
-color:#fff;
+border:1px solid #ccc;
 border-radius:6px;
 }
 
-textarea{height:120px}
-
-/* FOOTER */
 footer{
-background:#000;
+background:#111;
 padding:30px;
 text-align:center;
 color:#aaa;
 }
 
-/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -232,13 +214,11 @@ background:#25d366;
 color:#fff;
 padding:15px;
 border-radius:50%;
-font-size:22px;
 }
 
-/* RESPONSIVE */
 @media(max-width:768px){
-.hero h1{font-size:35px}
 .contact{grid-template-columns:1fr}
+.hero h1{font-size:32px}
 }
 
 </style>
@@ -246,100 +226,61 @@ font-size:22px;
 
 <body>
 
+<!-- FLOATING BACKGROUND IMAGES -->
+<div class="bg-images">
+<img src="Untitled design_page-0001.jpg">
+<img src="Untitled design_page-0002.jpg">
+<img src="Untitled design_page-0003.jpg">
+<img src="Untitled design_page-0004.jpg">
+</div>
+
 <!-- NAV -->
 <nav>
 <div class="logo">
-<img src="images/logo.png" onerror="this.style.display='none'">
+<img src="SKYAXON Logo.jpeg">
 SKYAXON
 </div>
 
 <ul>
 <li><a href="#">Home</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#why">Why Us</a></li>
 <li><a href="#gallery">Gallery</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 
-<a href="tel:8217508843" class="btn-call">Call Now</a>
+<a href="tel:8217508843" class="btn-call">Call</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
 
-<div class="slide active" style="background-image:url('images/scrap1.jpg')"></div>
-<div class="slide" style="background-image:url('images/scrap2.jpg')"></div>
-<div class="slide" style="background-image:url('images/scrap3.jpg')"></div>
-<div class="slide" style="background-image:url('images/scrap4.jpg')"></div>
-<div class="slide" style="background-image:url('images/scrap5.jpg')"></div>
-<div class="slide" style="background-image:url('images/scrap6.jpg')"></div>
+<div class="slide active" style="background-image:url('Untitled design_page-0001.jpg')"></div>
+<div class="slide" style="background-image:url('Untitled design_page-0002.jpg')"></div>
+<div class="slide" style="background-image:url('Untitled design_page-0003.jpg')"></div>
+<div class="slide" style="background-image:url('Untitled design_page-0004.jpg')"></div>
+<div class="slide" style="background-image:url('Untitled design_page-0005.jpg')"></div>
+<div class="slide" style="background-image:url('Untitled design_page-0006.jpg')"></div>
 
 <div class="hero-content">
 <h1>Turn Scrap Into Value</h1>
-<p>Premium Scrap Buying & Recycling in Bangalore</p>
+<p>Premium Scrap Buying & Recycling</p>
 
-<a href="tel:8217508843" class="btn">Call Now</a>
+<a href="tel:8217508843" class="btn">Call</a>
 <a href="https://wa.me/918217508843" class="btn">WhatsApp</a>
 </div>
 
 </section>
 
-<!-- SERVICES -->
-<section id="services">
-<div class="title">Our Core Services</div>
-
-<div class="grid">
-<div class="card"><img src="https://img.icons8.com/color/96/money.png"><h3>Best Price</h3></div>
-<div class="card"><img src="https://img.icons8.com/color/96/delivery.png"><h3>Fast Pickup</h3></div>
-<div class="card"><img src="https://img.icons8.com/color/96/security-checked.png"><h3>Secure Payment</h3></div>
-<div class="card"><img src="https://img.icons8.com/color/96/combo-chart.png"><h3>Tracking</h3></div>
-</div>
-</section>
-
-<!-- WHY -->
-<section id="why">
-<div class="title">Why SKYAXON</div>
-
-<div class="grid">
-<div class="card"><img src="https://img.icons8.com/color/96/checked.png"><p>Verified Weighing</p></div>
-<div class="card"><img src="https://img.icons8.com/color/96/factory.png"><p>Factory Clearance</p></div>
-<div class="card"><img src="https://img.icons8.com/color/96/handshake.png"><p>Trusted Partner</p></div>
-<div class="card"><img src="https://img.icons8.com/color/96/leaf.png"><p>Eco Friendly</p></div>
-</div>
-
-</section>
-
-<!-- ABOUT -->
-<section class="about">
-<div class="title">About SKYAXON</div>
-
-<p>
-SKYAXON is a modern scrap management company transforming waste into value.
-We specialize in collecting and recycling all types of scrap materials.
-</p>
-
-<br>
-
-<p>
-✔ GST: 29CCGPM5202G2ZO <br>
-✔ Fast Pickup <br>
-✔ Industrial Experts <br>
-✔ Eco Friendly
-</p>
-
-</section>
-
 <!-- GALLERY -->
-<section id="gallery" class="gallery">
+<section id="gallery">
 <div class="title">Gallery</div>
 
 <div class="grid">
-<img src="images/g1.jpg">
-<img src="images/g2.jpg">
-<img src="images/g3.jpg">
-<img src="images/g4.jpg">
-<img src="images/g5.jpg">
-<img src="images/g6.jpg">
+<img src="Untitled design_page-0001.jpg">
+<img src="Untitled design_page-0002.jpg">
+<img src="Untitled design_page-0003.jpg">
+<img src="Untitled design_page-0004.jpg">
+<img src="Untitled design_page-0005.jpg">
+<img src="Untitled design_page-0006.jpg">
 </div>
 
 </section>
@@ -347,13 +288,12 @@ We specialize in collecting and recycling all types of scrap materials.
 <!-- CONTACT -->
 <section id="contact">
 
-<div class="title">Send Enquiry</div>
+<div class="title">Contact</div>
 
 <div class="contact">
 
 <div>
-<p>📞 +91 8217508843</p>
-<p>📞 +91 7899917313</p>
+<p>📞 8217508843</p>
 <p>📧 skyaxonofficial@gmail.com</p>
 </div>
 
@@ -365,8 +305,6 @@ We specialize in collecting and recycling all types of scrap materials.
 </div>
 
 </div>
-
-<iframe src="https://maps.google.com/maps?q=bangalore&output=embed" width="100%" height="300"></iframe>
 
 </section>
 
