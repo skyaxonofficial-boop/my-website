@@ -12,48 +12,28 @@
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 
-/* BODY */
 body{
 background:#071a2f;
 color:#fff;
 }
 
-/* NAVBAR */
+/* NAV */
 nav{
 position:fixed;
-top:0;
-width:100%;
+top:0;width:100%;
 background:#061426;
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 40px;
 z-index:1000;
-border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-font-size:22px;
-font-weight:800;
-}
-
+.logo{display:flex;align-items:center;gap:10px;font-weight:800}
 .logo img{height:45px}
 
-nav ul{
-display:flex;
-gap:25px;
-list-style:none;
-}
-
-nav a{
-color:#ccc;
-text-decoration:none;
-font-size:14px;
-}
-
+nav ul{display:flex;gap:25px;list-style:none}
+nav a{color:#ccc;text-decoration:none}
 nav a:hover{color:#3b82f6}
 
 .btn-call{
@@ -67,10 +47,10 @@ color:#fff;
 .hero{
 height:100vh;
 position:relative;
-overflow:hidden;
 display:flex;
 align-items:center;
 padding:0 60px;
+overflow:hidden;
 }
 
 .slide{
@@ -92,39 +72,15 @@ height:100%;
 background:linear-gradient(90deg,#071a2f 40%,transparent);
 }
 
-.hero-content{
-position:relative;
-z-index:2;
-max-width:600px;
-}
+.hero-content{z-index:2;max-width:600px}
 
 .hero h1{
-font-size:70px;
+font-size:60px;
 font-weight:800;
 line-height:1.1;
 }
 
 .hero span{color:#3b82f6}
-
-.hero p{
-margin-top:20px;
-color:#aaa;
-}
-
-.badges{
-position:absolute;
-right:80px;
-top:150px;
-display:flex;
-flex-direction:column;
-gap:20px;
-}
-
-.badge{
-border:1px solid rgba(255,255,255,0.2);
-padding:20px;
-width:220px;
-}
 
 /* SECTION */
 section{padding:100px 60px}
@@ -132,7 +88,7 @@ section{padding:100px 60px}
 .title{
 font-size:40px;
 font-weight:800;
-margin-bottom:20px;
+margin-bottom:30px;
 }
 
 .title span{color:#3b82f6}
@@ -142,7 +98,6 @@ margin-bottom:20px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
-margin-top:40px;
 }
 
 /* CARD */
@@ -150,7 +105,45 @@ margin-top:40px;
 background:#0d2a4d;
 padding:25px;
 border-radius:10px;
-border:1px solid rgba(255,255,255,0.1);
+}
+
+/* ===== GALLERY ===== */
+.gallery{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* LIGHTBOX */
+.lightbox{
+position:fixed;
+top:0;left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:2000;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
 }
 
 /* CONTACT */
@@ -160,7 +153,7 @@ grid-template-columns:1fr 1fr;
 gap:40px;
 }
 
-input,textarea,select{
+input,textarea{
 width:100%;
 padding:12px;
 margin-top:10px;
@@ -177,10 +170,8 @@ text-align:center;
 color:#aaa;
 }
 
-/* RESPONSIVE */
 @media(max-width:768px){
-.hero h1{font-size:40px}
-.badges{display:none}
+.hero h1{font-size:35px}
 .contact{grid-template-columns:1fr}
 }
 
@@ -198,8 +189,7 @@ SKYAXON
 
 <ul>
 <li><a href="#services">Services</a></li>
-<li><a href="#why">Why Us</a></li>
-<li><a href="#materials">Materials</a></li>
+<li><a href="#gallery">Gallery</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 
@@ -217,52 +207,33 @@ SKYAXON
 
 <div class="hero-content">
 <h1>YOUR SCRAP.<br><span>OUR</span> EXPERTISE.</h1>
-<p>Transform to rise • Scrap for solutions</p>
-</div>
-
-<div class="badges">
-<div class="badge">GST Registered</div>
-<div class="badge">24H Fast Pickup</div>
-<div class="badge">100% Transparent</div>
 </div>
 
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-<div class="title">OUR <span>CORE SERVICES</span></div>
+<div class="title">OUR <span>SERVICES</span></div>
 
 <div class="grid">
 <div class="card">Best Market Value</div>
-<div class="card">Clean & Fast Pickup</div>
-<div class="card">Secure Payments</div>
+<div class="card">Fast Pickup</div>
+<div class="card">Secure Payment</div>
 <div class="card">Digital Tracking</div>
 </div>
 </section>
 
-<!-- WHY -->
-<section id="why">
-<div class="title">THE <span>SKYAXON</span> DIFFERENCE</div>
+<!-- GALLERY -->
+<section id="gallery">
+<div class="title">SCRAP <span>GALLERY</span></div>
 
-<p>We simplify industrial scrap management with honesty and care.</p>
-
-<div class="grid">
-<div class="card">Verified Weighing</div>
-<div class="card">Factory Clearance</div>
-<div class="card">Eco Friendly</div>
-</div>
-</section>
-
-<!-- MATERIALS -->
-<section id="materials">
-<div class="title">ALL TYPES OF <span>SCRAP</span></div>
-
-<div class="grid">
-<div class="card">Ferrous Scrap</div>
-<div class="card">Non-Ferrous</div>
-<div class="card">Stainless Steel</div>
-<div class="card">E-Waste</div>
-<div class="card">Industrial Scrap</div>
+<div class="gallery">
+<img src="Untitled design_page-0001.jpg">
+<img src="Untitled design_page-0002.jpg">
+<img src="Untitled design_page-0003.jpg">
+<img src="Untitled design_page-0004.jpg">
+<img src="Untitled design_page-0005.jpg">
+<img src="Untitled design_page-0006.jpg">
 </div>
 </section>
 
@@ -275,17 +246,11 @@ SKYAXON
 <div>
 <p>📞 +91 8217508843</p>
 <p>📧 skyaxonofficial@gmail.com</p>
-<p>📍 Bengaluru</p>
 </div>
 
 <div>
 <input placeholder="Name">
 <input placeholder="Phone">
-<select>
-<option>Select Scrap Type</option>
-<option>Iron</option>
-<option>Copper</option>
-</select>
 <textarea placeholder="Message"></textarea>
 </div>
 
@@ -296,15 +261,36 @@ SKYAXON
 © SKYAXON 2025
 </footer>
 
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+<img id="lightbox-img">
+</div>
+
 <script>
+
+/* SLIDER */
 let slides=document.querySelectorAll('.slide');
 let i=0;
-
 setInterval(()=>{
 slides[i].classList.remove('active');
 i=(i+1)%slides.length;
 slides[i].classList.add('active');
 },3000);
+
+/* GALLERY CLICK */
+let imgs=document.querySelectorAll('.gallery img');
+let lightbox=document.getElementById('lightbox');
+let lightboxImg=document.getElementById('lightbox-img');
+
+imgs.forEach(img=>{
+img.onclick=()=>{
+lightbox.style.display='flex';
+lightboxImg.src=img.src;
+}
+});
+
+lightbox.onclick=()=>lightbox.style.display='none';
+
 </script>
 
 </body>
