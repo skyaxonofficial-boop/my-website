@@ -12,6 +12,9 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
 
+section{padding:80px 20px;}
+.container{max-width:1200px;margin:auto;}
+
 header{
 position:fixed;
 width:100%;
@@ -26,43 +29,41 @@ justify-content:space-between;
 align-items:center;
 padding:15px 30px;
 }
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-}
+.logo{display:flex;align-items:center;gap:10px;}
 .logo img{height:60px;}
-nav ul{
-display:flex;
-gap:20px;
-list-style:none;
-}
-nav a{
-color:#fff;
-text-decoration:none;
-font-weight:600;
-}
+
+nav ul{display:flex;gap:20px;list-style:none;}
+nav a{color:#fff;text-decoration:none;font-weight:600;}
 nav a:hover{color:#ffd700;}
 
 .menu{display:none;font-size:24px;cursor:pointer;}
 
+/* HERO SLIDER */
 .hero{
 height:100vh;
 position:relative;
+overflow:hidden;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 color:#fff;
-overflow:hidden;
 }
-
-.hero video{
+.slide{
 position:absolute;
 width:100%;
 height:100%;
-object-fit:cover;
-z-index:-1;
+background-size:cover;
+background-position:center;
+animation:zoom 20s infinite;
+opacity:0;
+transition:opacity 1s;
+}
+.slide.active{opacity:1;}
+
+@keyframes zoom{
+0%{transform:scale(1);}
+100%{transform:scale(1.1);}
 }
 
 .overlay{
@@ -70,7 +71,11 @@ position:absolute;
 width:100%;
 height:100%;
 background:rgba(0,0,0,0.6);
-z-index:-1;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
 }
 
 .hero h1{font-size:50px;}
@@ -85,12 +90,15 @@ text-decoration:none;
 margin:5px;
 display:inline-block;
 font-weight:bold;
+transition:.3s;
+box-shadow:0 5px 10px rgba(0,0,0,0.3);
 }
-.btn:hover{background:#fff;}
+.btn:hover{
+transform:scale(1.1);
+background:#fff;
+}
 
-section{padding:80px 20px;}
-.container{max-width:1200px;margin:auto;}
-
+/* SERVICES */
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -99,14 +107,29 @@ gap:20px;
 .card{
 background:#fff;
 padding:20px;
-text-align:center;
 border-radius:10px;
+text-align:center;
 box-shadow:0 5px 10px rgba(0,0,0,0.1);
 transition:.3s;
 }
 .card:hover{transform:translateY(-10px);}
 .card i{font-size:40px;color:#0b3a8f;margin-bottom:10px;}
 
+/* PROCESS */
+.process{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+.step{
+background:#fff;
+padding:20px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* GALLERY */
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -115,8 +138,10 @@ gap:20px;
 .gallery img{
 width:100%;
 border-radius:10px;
+cursor:pointer;
 }
 
+/* FOOTER */
 footer{
 background:#0b3a8f;
 color:#fff;
@@ -124,6 +149,7 @@ text-align:center;
 padding:20px;
 }
 
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -139,8 +165,17 @@ justify-content:center;
 font-size:30px;
 }
 
+/* MOBILE */
 @media(max-width:768px){
-nav ul{display:none;flex-direction:column;background:#0b3a8f;position:absolute;right:0;top:70px;width:200px;}
+nav ul{
+display:none;
+flex-direction:column;
+background:#0b3a8f;
+position:absolute;
+top:70px;
+right:0;
+width:200px;
+}
 nav ul.show{display:flex;}
 .menu{display:block;}
 }
@@ -162,7 +197,9 @@ nav ul.show{display:flex;}
 <ul id="nav">
 <li><a href="#home">Home</a></li>
 <li><a href="#services">Services</a></li>
+<li><a href="#process">Process</a></li>
 <li><a href="#gallery">Gallery</a></li>
+<li><a href="#about">About</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -171,17 +208,23 @@ nav ul.show{display:flex;}
 
 <!-- HERO -->
 <section id="home" class="hero">
-<video autoplay muted loop>
-<source src="https://cdn.coverr.co/videos/coverr-working-in-a-metal-factory-5171/1080p.mp4" type="video/mp4">
-</video>
+
+<div class="slide active" style="background-image:url('Untitled design_page-0001.jpg')"></div>
+<div class="slide" style="background-image:url('Untitled design_page-0002.jpg')"></div>
+<div class="slide" style="background-image:url('Untitled design_page-0003.jpg')"></div>
+<div class="slide" style="background-image:url('Untitled design_page-0004.jpg')"></div>
+<div class="slide" style="background-image:url('Untitled design_page-0005.jpg')"></div>
+<div class="slide" style="background-image:url('Untitled design_page-0006.jpg')"></div>
+
 <div class="overlay"></div>
 
-<div>
+<div class="hero-content">
 <h1>Turn Your Scrap Into Value</h1>
 <p>Premium Scrap Buying & Recycling in Bengaluru</p>
 <a href="tel:+918217508843" class="btn">Call Now</a>
 <a href="https://wa.me/918217508843" class="btn">WhatsApp</a>
 </div>
+
 </section>
 
 <!-- SERVICES -->
@@ -197,6 +240,18 @@ nav ul.show{display:flex;}
 </div>
 </section>
 
+<!-- PROCESS -->
+<section id="process">
+<div class="container">
+<h2>Our Process</h2>
+<div class="process">
+<div class="step"><i class="fas fa-phone"></i><p>Contact Us</p></div>
+<div class="step"><i class="fas fa-truck"></i><p>Pickup Scrap</p></div>
+<div class="step"><i class="fas fa-money-bill"></i><p>Instant Payment</p></div>
+</div>
+</div>
+</section>
+
 <!-- GALLERY -->
 <section id="gallery">
 <div class="container">
@@ -206,7 +261,17 @@ nav ul.show{display:flex;}
 <img src="Untitled design_page-0002.jpg">
 <img src="Untitled design_page-0003.jpg">
 <img src="Untitled design_page-0004.jpg">
+<img src="Untitled design_page-0005.jpg">
+<img src="Untitled design_page-0006.jpg">
 </div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+<h2>About SKYAXON</h2>
+<p>We are a leading scrap buying and recycling company in Bengaluru offering industrial scrap solutions, factory clearance, and sustainable disposal services.</p>
 </div>
 </section>
 
@@ -231,6 +296,16 @@ nav ul.show{display:flex;}
 function toggle(){
 document.getElementById("nav").classList.toggle("show");
 }
+
+/* SLIDER */
+let slides=document.querySelectorAll(".slide");
+let index=0;
+
+setInterval(()=>{
+slides[index].classList.remove("active");
+index=(index+1)%slides.length;
+slides[index].classList.add("active");
+},3000);
 </script>
 
 </body>
