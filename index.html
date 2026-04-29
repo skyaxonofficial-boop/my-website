@@ -888,16 +888,19 @@ img {
   </form>
 
 </div>
-      <select>
-        <option value="">Select scrap type...</option>
-        <option>Ferrous Scrap (Iron / Steel)</option>
-        <option>Non-Ferrous (Aluminum / Copper)</option>
-        <option>Stainless Steel</option>
-        <option>Electronic Scrap</option>
-        <option>Industrial Waste</option>
-        <option>Mixed / Multiple Types</option>
-        <option>Other</option>
-<select name="scrap_type">    </div>
+      <div class="form-group">
+  <label>Type of Scrap</label>
+  <select name="scrap_type" required>
+    <option value="">Select scrap type...</option>
+    <option>Ferrous Scrap (Iron / Steel)</option>
+    <option>Non-Ferrous (Aluminum / Copper)</option>
+    <option>Stainless Steel</option>
+    <option>Electronic Scrap</option>
+    <option>Industrial Waste</option>
+    <option>Mixed / Multiple Types</option>
+    <option>Other</option>
+  </select>
+</div>
     <div class="form-group">
       <label>Message / Quantity Details</label>
    <textarea name="message" placeholder="Tell us about your scrap — quantity, location, urgency..."></textarea>
