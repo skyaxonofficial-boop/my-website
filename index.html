@@ -5,106 +5,144 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SKYAXON Scrap Solutions</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Roboto',sans-serif;color:#333;scroll-behavior:smooth;}
-h1,h2{font-family:'Montserrat',sans-serif;}
+body{font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+background:#0b3a8f;
+color:#fff;
+z-index:1000;
+}
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+}
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+.logo img{height:60px;}
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+nav a{
+color:#fff;
+text-decoration:none;
+font-weight:600;
+}
+nav a:hover{color:#ffd700;}
+
+.menu{display:none;font-size:24px;cursor:pointer;}
+
+.hero{
+height:100vh;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff;
+overflow:hidden;
+}
+
+.hero video{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-1;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+z-index:-1;
+}
+
+.hero h1{font-size:50px;}
+.hero p{margin:20px 0;font-size:20px;}
+
+.btn{
+padding:12px 30px;
+background:#ffd700;
+color:#000;
+border-radius:30px;
+text-decoration:none;
+margin:5px;
+display:inline-block;
+font-weight:bold;
+}
+.btn:hover{background:#fff;}
+
 section{padding:80px 20px;}
 .container{max-width:1200px;margin:auto;}
 
-/* NAV */
-header{
-  position:fixed;top:0;width:100%;
-  background:#0b3a8f;color:#fff;z-index:1000;
-}
-.nav-container{
-  display:flex;justify-content:space-between;
-  align-items:center;padding:15px 20px;
-}
-.logo-area{display:flex;align-items:center;gap:10px;}
-.logo-area img{height:50px;}
-nav ul{display:flex;gap:20px;list-style:none;}
-nav a{color:#fff;text-decoration:none;font-weight:bold;}
-nav a:hover{color:#ffd700;}
-.menu-toggle{display:none;cursor:pointer;font-size:24px}
-
-/* HERO */
-.hero{
-  height:100vh;display:flex;align-items:center;
-  justify-content:center;text-align:center;
-  color:#fff;position:relative;
-}
-.hero::before{
-  content:"";position:absolute;
-  width:100%;height:100%;
-  background:rgba(0,0,0,0.5);
-}
-.hero-content{position:relative;z-index:2;}
-.hero h1{font-size:50px;margin-bottom:20px;}
-.hero p{font-size:20px;margin-bottom:30px;}
-
-.btn{
-  background:#ffd700;color:#0b3a8f;
-  padding:12px 25px;border-radius:30px;
-  text-decoration:none;font-weight:bold;
-  margin:5px;display:inline-block;
-}
-.btn:hover{background:#fff}
-
-/* SLIDER */
-.slider{position:absolute;width:100%;height:100%;overflow:hidden;}
-.slides{display:flex;width:500%;height:100%;animation:slide 20s infinite;}
-.slides img{width:100%;height:100%;object-fit:cover;}
-
-@keyframes slide{
-0%,20%{margin-left:0;}
-25%,45%{margin-left:-100%;}
-50%,70%{margin-left:-200%;}
-75%,95%{margin-left:-300%;}
-100%{margin-left:-400%;}
-}
-
-/* SERVICES */
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 .card{
-background:#fff;padding:20px;border-radius:10px;
+background:#fff;
+padding:20px;
 text-align:center;
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
+border-radius:10px;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+transition:.3s;
 }
-.card i{font-size:40px;color:#0b3a8f}
+.card:hover{transform:translateY(-10px);}
+.card i{font-size:40px;color:#0b3a8f;margin-bottom:10px;}
 
-/* FOOTER */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
 footer{
-background:#0b3a8f;color:#fff;
-text-align:center;padding:20px;
+background:#0b3a8f;
+color:#fff;
+text-align:center;
+padding:20px;
 }
 
-/* WHATSAPP */
-.whatsapp-btn{
-position:fixed;bottom:20px;right:20px;
-background:#25D366;color:#fff;
-width:60px;height:60px;border-radius:50%;
-display:flex;align-items:center;justify-content:center;
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
 font-size:30px;
 }
 
-/* MOBILE */
 @media(max-width:768px){
-nav ul{
-display:none;flex-direction:column;
-background:#0b3a8f;
-position:absolute;top:70px;right:0;
-width:200px;
-}
+nav ul{display:none;flex-direction:column;background:#0b3a8f;position:absolute;right:0;top:70px;width:200px;}
 nav ul.show{display:flex;}
-.menu-toggle{display:block;}
+.menu{display:block;}
 }
 </style>
 </head>
@@ -112,17 +150,19 @@ nav ul.show{display:flex;}
 <body>
 
 <header>
-<div class="nav-container">
-<div class="logo-area">
+<div class="nav">
+<div class="logo">
 <img src="SKYAXON Logo.jpeg">
-<h1>SKYAXON</h1>
+<h2>SKYAXON</h2>
 </div>
 
+<div class="menu" onclick="toggle()">☰</div>
+
 <nav>
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-<ul id="menu">
+<ul id="nav">
 <li><a href="#home">Home</a></li>
 <li><a href="#services">Services</a></li>
+<li><a href="#gallery">Gallery</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -131,22 +171,16 @@ nav ul.show{display:flex;}
 
 <!-- HERO -->
 <section id="home" class="hero">
-<div class="slider">
-<div class="slides">
-<img src="https://images.unsplash.com/photo-1513828583688-c52646db42da">
-<img src="https://images.unsplash.com/photo-1581090700227-4c4d0d8c4e5d">
-<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
-<img src="https://images.unsplash.com/photo-1581091012184-5c1cfa3d8f9c">
-<img src="https://images.unsplash.com/photo-1497493292307-31c376b6e479">
-</div>
-</div>
+<video autoplay muted loop>
+<source src="https://cdn.coverr.co/videos/coverr-working-in-a-metal-factory-5171/1080p.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
 
-<div class="hero-content">
+<div>
 <h1>Turn Your Scrap Into Value</h1>
-<p>Trusted scrap buying & recycling in Bengaluru</p>
-
-<a class="btn" href="tel:+918217508843">Call Now</a>
-<a class="btn" href="https://wa.me/918217508843">WhatsApp</a>
+<p>Premium Scrap Buying & Recycling in Bengaluru</p>
+<a href="tel:+918217508843" class="btn">Call Now</a>
+<a href="https://wa.me/918217508843" class="btn">WhatsApp</a>
 </div>
 </section>
 
@@ -163,28 +197,39 @@ nav ul.show{display:flex;}
 </div>
 </section>
 
+<!-- GALLERY -->
+<section id="gallery">
+<div class="container">
+<h2>Gallery</h2>
+<div class="gallery">
+<img src="Untitled design_page-0001.jpg">
+<img src="Untitled design_page-0002.jpg">
+<img src="Untitled design_page-0003.jpg">
+<img src="Untitled design_page-0004.jpg">
+</div>
+</div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
 <div class="container">
-<h2>Contact Us</h2>
+<h2>Contact</h2>
 <p>📞 +91 8217508843</p>
 <p>📧 skyaxonofficial@gmail.com</p>
 </div>
 </section>
 
 <footer>
-<p>© 2026 SKYAXON</p>
+<p>© SKYAXON 2026</p>
 </footer>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/918217508843" class="whatsapp-btn">
+<a href="https://wa.me/918217508843" class="whatsapp">
 <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- SCRIPT -->
 <script>
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("show");
+function toggle(){
+document.getElementById("nav").classList.toggle("show");
 }
 </script>
 
