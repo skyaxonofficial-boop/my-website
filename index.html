@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,34 +7,42 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#f4f7fb;color:#222;}
+body{background:#f0f4fa;color:#222;}
 nav{position:fixed;top:0;width:100%;background:#0b3a8f;display:flex;justify-content:space-between;align-items:center;padding:15px 40px;z-index:1000;}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;color:#fff}
-.logo img{height:45px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;color:#fff;font-size:34px}
+.logo img{height:75px}
 nav ul{display:flex;gap:25px;list-style:none}
-nav a{color:#eee;text-decoration:none}
+nav a{color:#eee;text-decoration:none;font-weight:600}
 nav a:hover{color:#ffd700}
-.btn-call{background:#ffd700;padding:10px 18px;border-radius:6px;color:#0b3a8f;font-weight:600}
+.btn-call{background:#ffd700;padding:10px 18px;border-radius:6px;color:#0b3a8f;font-weight:600;transition:.3s;box-shadow:0 4px 6px rgba(0,0,0,0.2);}
+.btn-call:hover{transform:scale(1.05);background:#fff;color:#0b3a8f}
 .hero{height:100vh;position:relative;display:flex;align-items:center;padding:0 60px;overflow:hidden;color:#fff;background:#0b3a8f}
 .slide{position:absolute;width:100%;height:100%;background-size:cover;background-position:center;opacity:0;transition:1s;}
 .slide.active{opacity:1}
 .overlay{position:absolute;width:100%;height:100%;background:linear-gradient(90deg,#0b3a8f 40%,transparent);}
 .hero-content{z-index:2;max-width:600px}
-.hero h1{font-size:60px;font-weight:800;line-height:1.1;}
+.hero h1{font-size:65px;font-weight:800;line-height:1.1;}
 .hero span{color:#ffd700}
-section{padding:100px 60px}
-.title{font-size:40px;font-weight:800;margin-bottom:30px;text-align:center}
+section{padding:50px 60px}
+.title{font-size:36px;font-weight:800;margin-bottom:20px;text-align:center}
 .title span{color:#0b3a8f}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
-.card{background:#fff;padding:25px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.card{background:#fff;padding:20px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.1);transition:.3s;}
+.card:hover{transform:translateY(-5px);box-shadow:0 6px 12px rgba(0,0,0,0.2);}
 .card h3{color:#0b3a8f;margin-bottom:10px}
-.gallery{margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
-.gallery img{width:100%;height:220px;object-fit:cover;border-radius:10px;cursor:pointer;transition:0.3s;}
+.gallery{margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;}
+.gallery img{width:100%;height:200px;object-fit:cover;border-radius:10px;cursor:pointer;transition:0.3s;}
 .gallery img:hover{transform:scale(1.05);}
 .lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);display:none;align-items:center;justify-content:center;z-index:2000;}
 .lightbox img{max-width:90%;max-height:90%;}
-footer{background:#0b3a8f;padding:30px;text-align:center;color:#fff}
-@media(max-width:768px){.hero h1{font-size:35px}}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+input,textarea{width:100%;padding:12px;margin-top:10px;background:#f9f9f9;border:1px solid #ccc;color:#222;border-radius:6px;}
+button{background:#0b3a8f;color:#fff;padding:12px 20px;border:none;border-radius:6px;font-weight:600;cursor:pointer;transition:.3s;box-shadow:0 4px 6px rgba(0,0,0,0.2);}
+button:hover{transform:scale(1.05);background:#ffd700;color:#0b3a8f}
+footer{background:#0b3a8f;padding:20px;text-align:center;color:#fff}
+.whatsapp-btn{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 4px 6px rgba(0,0,0,0.2);z-index:1500;transition:.3s;}
+.whatsapp-btn:hover{transform:scale(1.1);}
+@media(max-width:768px){.hero h1{font-size:40px}.contact{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -81,7 +89,7 @@ footer{background:#0b3a8f;padding:30px;text-align:center;color:#fff}
 <section id="difference">
 <div class="title">THE <span>SKYAXON DIFFERENCE</span></div>
 <p style="text-align:center;max-width:800px;margin:auto;">True business growth happens when we clear the path for new opportunities. We simplify industrial scrap management with honesty and care.</p>
-<div class="grid" style="margin-top:40px;">
+<div class="grid" style="margin-top:20px;">
 <div class="card"><h3>Verified & Weighed</h3><p>Accurate weighing and quality check on every collection.</p></div>
 <div class="card"><h3>Factory Clearance</h3><p>Complete industrial site cleanouts handled end-to-end.</p></div>
 <div class="card"><h3>Transparent Pricing</h3><p>Iron, Aluminum & Copper with no hidden charges.</p></div>
@@ -95,27 +103,4 @@ footer{background:#0b3a8f;padding:30px;text-align:center;color:#fff}
 <section id="benefits">
 <div class="title">EXCLUSIVE <span>BENEFITS</span></div>
 <p style="text-align:center;max-width:800px;margin:auto;">We reward loyalty and volume. The more you partner with us, the better it gets.</p>
-<div class="grid" style="margin-top:40px;">
-<div class="card"><h3>Bulk Scrap Special</h3><p>Higher rates for bulk quantities. Premium pricing for volume scrap collections.</p></div>
-<div class="card"><h3>Loyalty Rewards</h3><p>Regular partners receive exclusive benefits and priority service.</p></div>
-<div class="card"><h3>Refer & Earn</h3><p>Refer a business to SKYAXON and earn exciting rewards.</p></div>
-</div>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery">
-<div class="title">SCRAP <span>GALLERY</span></div>
-<div class="gallery">
-<img src="Untitled design_page-0001.jpg">
-<img src="Untitled design_page-0002.jpg">
-<img src="Untitled design_page-0003.jpg">
-<img src="Untitled design_page-0004.jpg">
-<img src="Untitled design_page-0005.jpg">
-<img src="Untitled design_page-0006.jpg">
-</div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-<div class="title">ABOUT <span>US</span></div>
-<p style="max-width:900px;margin:auto;text-align:center;">SKYAXON Scrap Solutions is a modern and reliable scrap management company dedicated to transforming waste into value. We specialize in collecting, processing, and recycling all types of scrap materials with a strong focus on sustainability, efficiency, and customer satisfaction. Our mission is to provide eco-friendly solutions that help industries and individuals responsibly dispose of scrap while contributing
+<div class="grid" style="margin-top:20
