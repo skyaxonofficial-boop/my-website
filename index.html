@@ -11,171 +11,96 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
-
 section{padding:80px 20px;}
 .container{max-width:1200px;margin:auto;}
 
 header{
-position:fixed;
-width:100%;
-top:0;
-background:#0b3a8f;
-color:#fff;
-z-index:1000;
+position:fixed;width:100%;top:0;
+background:#0b3a8f;color:#fff;z-index:1000;
 }
-.nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 30px;
-}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:15px 30px;}
 .logo{display:flex;align-items:center;gap:10px;}
 .logo img{height:60px;}
-
 nav ul{display:flex;gap:20px;list-style:none;}
 nav a{color:#fff;text-decoration:none;font-weight:600;}
 nav a:hover{color:#ffd700;}
-
 .menu{display:none;font-size:24px;cursor:pointer;}
 
-/* HERO SLIDER */
 .hero{
-height:100vh;
-position:relative;
-overflow:hidden;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:#fff;
+height:100vh;position:relative;overflow:hidden;
+display:flex;align-items:center;justify-content:center;
+text-align:center;color:#fff;
 }
 .slide{
-position:absolute;
-width:100%;
-height:100%;
-background-size:cover;
-background-position:center;
+position:absolute;width:100%;height:100%;
+background-size:cover;background-position:center;
+opacity:0;transition:1s;
 animation:zoom 20s infinite;
-opacity:0;
-transition:opacity 1s;
 }
 .slide.active{opacity:1;}
-
 @keyframes zoom{
 0%{transform:scale(1);}
 100%{transform:scale(1.1);}
 }
-
 .overlay{
-position:absolute;
-width:100%;
-height:100%;
+position:absolute;width:100%;height:100%;
 background:rgba(0,0,0,0.6);
 }
-
-.hero-content{
-position:relative;
-z-index:2;
-}
-
+.hero-content{position:relative;z-index:2;}
 .hero h1{font-size:50px;}
 .hero p{margin:20px 0;font-size:20px;}
 
 .btn{
-padding:12px 30px;
-background:#ffd700;
-color:#000;
-border-radius:30px;
-text-decoration:none;
-margin:5px;
-display:inline-block;
-font-weight:bold;
-transition:.3s;
+padding:12px 30px;background:#ffd700;color:#000;
+border-radius:30px;text-decoration:none;margin:5px;
+display:inline-block;font-weight:bold;
 box-shadow:0 5px 10px rgba(0,0,0,0.3);
-}
-.btn:hover{
-transform:scale(1.1);
-background:#fff;
-}
-
-/* SERVICES */
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-.card{
-background:#fff;
-padding:20px;
-border-radius:10px;
-text-align:center;
-box-shadow:0 5px 10px rgba(0,0,0,0.1);
 transition:.3s;
+}
+.btn:hover{transform:scale(1.1);background:#fff;}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.card{
+background:#fff;padding:20px;border-radius:10px;text-align:center;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);transition:.3s;
 }
 .card:hover{transform:translateY(-10px);}
 .card i{font-size:40px;color:#0b3a8f;margin-bottom:10px;}
 
-/* PROCESS */
-.process{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-.step{
-background:#fff;
-padding:20px;
-text-align:center;
-border-radius:10px;
-box-shadow:0 5px 10px rgba(0,0,0,0.1);
+.process{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.step{background:#fff;padding:20px;border-radius:10px;text-align:center;}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.gallery img{width:100%;border-radius:10px;}
+
+footer{background:#0b3a8f;color:#fff;text-align:center;padding:20px;}
+
+.wa-float{
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:#fff;width:60px;height:60px;
+border-radius:50%;display:flex;align-items:center;justify-content:center;
+font-size:30px;cursor:pointer;z-index:999;
 }
 
-/* GALLERY */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+.wa-box{
+position:fixed;bottom:90px;right:20px;width:280px;
+background:#fff;border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+display:none;z-index:999;
 }
-.gallery img{
-width:100%;
-border-radius:10px;
-cursor:pointer;
+.wa-header{
+background:#25D366;color:#fff;padding:10px;
+display:flex;justify-content:space-between;
 }
-
-/* FOOTER */
-footer{
-background:#0b3a8f;
-color:#fff;
-text-align:center;
-padding:20px;
+.wa-body{padding:15px;text-align:center;}
+.wa-body a{
+display:inline-block;margin-top:10px;
+background:#25D366;color:#fff;
+padding:10px 15px;border-radius:20px;text-decoration:none;
 }
 
-/* WHATSAPP */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:#fff;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-}
-
-/* MOBILE */
 @media(max-width:768px){
-nav ul{
-display:none;
-flex-direction:column;
-background:#0b3a8f;
-position:absolute;
-top:70px;
-right:0;
-width:200px;
-}
+nav ul{display:none;flex-direction:column;background:#0b3a8f;position:absolute;top:70px;right:0;width:200px;}
 nav ul.show{display:flex;}
 .menu{display:block;}
 }
@@ -288,27 +213,47 @@ nav ul.show{display:flex;}
 <p>© SKYAXON 2026</p>
 </footer>
 
-<a href="https://wa.me/918217508843" class="whatsapp">
+<!-- WHATSAPP CHAT -->
+<div id="wa-box" class="wa-box">
+<div class="wa-header">
+<strong>SKYAXON</strong>
+<span onclick="closeWA()">✖</span>
+</div>
+<div class="wa-body">
+<p>Hi 👋<br>How can we help you?</p>
+<a href="https://wa.me/918217508843" target="_blank">Chat on WhatsApp</a>
+</div>
+</div>
+
+<div class="wa-float" onclick="openWA()">
 <i class="fab fa-whatsapp"></i>
-</a>
+</div>
 
 <script>
 function toggle(){
 document.getElementById("nav").classList.toggle("show");
 }
 
-/* SLIDER */
 let slides=document.querySelectorAll(".slide");
 let index=0;
-
 setInterval(()=>{
 slides[index].classList.remove("active");
 index=(index+1)%slides.length;
 slides[index].classList.add("active");
 },3000);
+
+function openWA(){
+document.getElementById("wa-box").style.display="block";
+}
+function closeWA(){
+document.getElementById("wa-box").style.display="none";
+}
+
+setTimeout(()=>{
+document.getElementById("wa-box").style.display="block";
+},5000);
 </script>
 
 </body>
 </html>
-
 
